@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melkamu Dejen | Portfolio</title>
+  <meta name="description" content="Portfolio of Melkamu Dejen, 3rd-year Information Systems student and aspiring software developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="logo" href="#home">Melkamu D.</a>
+  <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+    <button id="themeBtn" class="theme-btn" aria-label="Switch to dark mode">Dark</button>
+  </nav>
+</header>
+
+<main id="main">
+  <section id="home" class="hero">
+    <figure class="photo">
+      <img src="images/profile.jpg" alt="Portrait of Melkamu Dejen in a blue and white plaid shirt, standing in front of a dark blue gate" width="320" height="400" onerror="this.style.display='none'">
+      <figcaption>MD</figcaption>
+    </figure>
+    <div class="hero-text">
+    <p class="welcome">Welcome to my portfolio</p>
+    <h1>Melkamu Dejen</h1>
+    <p class="lead">3rd-year Information Systems student and aspiring software developer, building meaningful digital solutions.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="cv/Melkamu_Dejen_CV.pdf" download>Download CV</a>
+    </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about-grid">
+      <article>
+        <p>I am a third-year Information Systems student passionate about technology, software development, and problem-solving. I enjoy building websites, learning programming languages, and exploring how technology can improve everyday life.</p>
+        <p><strong>Career goal:</strong> to become a professional software developer who creates innovative and meaningful digital solutions.</p>
+        <p><strong>Interests:</strong> web development, programming, database management, technology, problem-solving, music and continuous learning.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill" data-level="70"><span>HTML: creating and structuring web pages</span><div class="bar"><i></i></div></div>
+      <div class="skill" data-level="60"><span>C#: basic programming and OOP</span><div class="bar"><i></i></div></div>
+      <div class="skill" data-level="60"><span>Java: programming fundamentals and OOP</span><div class="bar"><i></i></div></div>
+      <div class="skill" data-level="55"><span>C++: problem-solving and programming logic</span><div class="bar"><i></i></div></div>
+      <div class="skill" data-level="70"><span>SQL: writing queries and managing databases</span><div class="bar"><i></i></div></div>
+      <div class="skill" data-level="65"><span>Database management: design and administration</span><div class="bar"><i></i></div></div>
+    </div>
+    <p class="note"><strong>Soft skills:</strong> problem-solving, continuous learning, curiosity about technology.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="web">Web</button>
+      <button class="chip" data-filter="data">Database</button>
+    </div>
+    <div class="cards">
+      <article class="card" data-cat="web data">
+        <h3>Library Management System Website</h3>
+        <p>A website for managing library books, members and borrowing records.</p>
+        <button class="link" data-title="Library Management System Website" data-text="A web-based library management system built as a university project. It combines a web interface with a database to store, search and manage library records.">Details</button>
+      </article>
+      <article class="card" data-cat="web">
+        <h3>Personal Portfolio Website</h3>
+        <p>This site: responsive, themeable and built with HTML5, CSS3 and JavaScript.</p>
+        <button class="link" data-title="Personal Portfolio Website" data-text="Built for the Internet Programming I course. It has a responsive menu, dark/light theme, project filter, animated skill bars and a validated contact form.">Details</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ol class="timeline">
+      <li><strong>BSc in Information Systems</strong><br>Wollo University, Kombolcha Institute of Technology<br><span>Currently in 3rd year. Developed practical knowledge of programming, databases and software development.</span></li>
+    </ol>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul class="plain">
+      <li>Gained practical knowledge of programming, databases and software development through university coursework.</li>
+      <li>Developed a library management system website and this personal portfolio.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <address>
+        <p>Email: <a href="mailto:melkamudejen78@gmail.com">melkamudejen78@gmail.com</a></p>
+        <p>Location: Bahir Dar, Ethiopia</p>
+      </address>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+        <small class="err" id="nameErr"></small>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <small class="err" id="emailErr"></small>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="4" required minlength="10"></textarea>
+        <small class="err" id="msgErr"></small>
+        <button class="btn primary" type="submit">Send message</button>
+        <p id="formOk" class="ok" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><p>&copy; <span id="year"></span> Melkamu Dejen. Wollo University, INSY3061.</p></footer>
+
+<dialog id="modal"><h3 id="mTitle"></h3><p id="mText"></p><button class="btn primary" id="mClose">Close</button></dialog>
+<script src="js/script.js"></script>
+</body>
+</html>
